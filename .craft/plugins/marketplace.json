@@ -1,7 +1,7 @@
 {
-  "name": "dotcraft-official",
+  "name": "loopcode-official",
   "interface": {
-    "displayName": "DotCraft Official Plugins"
+    "displayName": "LoopCode Official Plugins"
   },
   "plugins": [
     {
