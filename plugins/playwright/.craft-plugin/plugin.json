@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "playwright",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "displayName": "Playwright",
   "description": "Playwright MCP tools for browser automation, screenshots, forms, and end-to-end testing workflows.",
   "capabilities": ["mcp"],

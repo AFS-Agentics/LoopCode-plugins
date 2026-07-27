@@ -3,7 +3,7 @@
     "gitlab": {
       "transport": "stdio",
       "command": "npx",
-      "args": ["-y", "mcp-remote@latest", "https://gitlab.com/api/v4/mcp"]
+      "arguments": ["-y", "mcp-remote@latest", "https://gitlab.com/api/v4/mcp"]
     }
   }
 }
