@@ -3,16 +3,16 @@
     {
       "appId": "com.dotharness.oratorio",
       "displayName": "Oratorio",
-      "developerName": "DotHarness",
+      "developerName": "AFS Agentics",
       "description": "Manage Oratorio board items and review rounds from selected LoopCode threads.",
       "category": "Productivity",
       "icon": "./skills/oratorio/assets/oratorio.svg",
       "originChannel": "oratorio",
-      "releasePage": "https://github.com/DotHarness/oratorio/releases",
+      "releasePage": "https://github.com/AFS-Agentics/oratorio/releases",
       "nativeApplication": {
         "displayName": "Oratorio",
         "protocol": "oratorio",
-        "installUrl": "https://github.com/DotHarness/oratorio/releases",
+        "installUrl": "https://github.com/AFS-Agentics/oratorio/releases",
         "platforms": {
           "windows": { "appUserModelId": "com.oratorio.desktop", "protocol": "oratorio" },
           "macos": { "bundleId": "com.oratorio.desktop", "protocol": "oratorio" },
