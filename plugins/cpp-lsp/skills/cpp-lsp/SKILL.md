@@ -1,6 +1,6 @@
 ---
 name: cpp-lsp
-description: Use when setting up, repairing, or explaining the DotCraft C/C++ LSP plugin, including installing clangd into the plugin-local server/clangd directory and configuring C/C++ language intelligence.
+description: Use when setting up, repairing, or explaining the LoopCode C/C++ LSP plugin, including installing clangd into the plugin-local server/clangd directory and configuring C/C++ language intelligence.
 ---
 
 # C/C++ LSP
@@ -22,8 +22,8 @@ The script downloads clangd version `22.1.0` into `server/clangd` by default. Ov
 Requirements:
 
 - A supported standalone clangd archive for the current platform: Windows, macOS, or Linux x64 by default.
-- DotCraft `Tools.Lsp.Enabled=true`.
+- LoopCode `Tools.Lsp.Enabled=true`.
 - A C/C++ project with `compile_commands.json`, `compile_flags.txt`, or a usable `.clangd` setup for best results.
-- Refresh or restart DotCraft after installation so the plugin-local command can be loaded.
+- Refresh or restart LoopCode after installation so the plugin-local command can be loaded.
 
 If clangd starts but diagnostics are poor, inspect the project's compile database first. The plugin installs the language server only; it does not infer compiler flags for arbitrary build systems.

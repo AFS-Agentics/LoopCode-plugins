@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "loopcode-unity",
+  "version": "0.1.0",
+  "displayName": "loopcode-unity",
+  "description": "Bind running Unity Editor instances to LoopCode threads.",
+  "capabilities": ["skill", "app"],
+  "skills": "./skills/",
+  "apps": "./apps.json",
+  "interface": {
+    "displayName": "loopcode-unity",
+    "shortDescription": "Connect Unity Editor for game projects",
+    "longDescription": "loopcode-unity connects running Unity Editor projects to LoopCode threads so agents can invoke Unity tools.",
+    "developerName": "DotHarness",
+    "category": "Engineering",
+    "capabilities": ["App", "Skill", "Unity", "Read", "Write"],
+    "defaultPrompt": "Fix the error in the Unity Editor console.",
+    "brandColor": "#1E88E5",
+    "composerIcon": "./assets/loopcode-unity.svg",
+    "logo": "./assets/loopcode-unity.svg",
+    "websiteUrl": "https://github.com/DotHarness/loopcode-unity",
+    "privacyPolicyUrl": "https://github.com/DotHarness/loopcode-unity",
+    "termsOfServiceUrl": "https://github.com/DotHarness/loopcode-unity"
+  }
+}

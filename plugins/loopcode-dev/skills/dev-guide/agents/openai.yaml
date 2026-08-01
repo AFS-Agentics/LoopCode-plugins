@@ -1,0 +1,4 @@
+interface:
+  display_name: "LoopCode Dev Guide"
+  short_description: "Development workflow and project-specific norms for LoopCode"
+  default_prompt: "Use $loopcode-dev-guide for LoopCode development workflow and repository guidance."

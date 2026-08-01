@@ -1,7 +1,7 @@
 /*
  * Oratorio board desktop extension.
  *
- * Rendered inside DotCraft Desktop's main view. All colors resolve from DotCraft
+ * Rendered inside LoopCode Desktop's main view. All colors resolve from LoopCode
  * tokens (specs/clients/DESIGN.md), so the board follows the host light/dark theme.
  * Every selector is scoped under `.oratorio-board` to avoid colliding with host
  * styles; the filter dropdowns intentionally reuse the host `.dc-settings-select*`
@@ -522,7 +522,7 @@ html[data-theme="light"] .oratorio-board .oratorio-drawer { box-shadow: -12px 0 
 .oratorio-preset:hover { background: var(--bg-tertiary); color: var(--text-primary); border-color: var(--border-active); }
 .oratorio-modal-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 2px; }
 
-/* Approve/dispatch undo + status notices use DotCraft's native toast stack
+/* Approve/dispatch undo + status notices use LoopCode's native toast stack
    (host.ui.showToast), so the board no longer ships its own toast UI. */
 
 /* ── Celebration burst ── */

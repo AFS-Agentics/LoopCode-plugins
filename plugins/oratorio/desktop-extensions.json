@@ -3,7 +3,7 @@
     {
       "id": "oratorio-board",
       "displayName": "Oratorio Board",
-      "description": "Embeds the Oratorio board inside DotCraft Desktop for a quick glance and common decisions.",
+      "description": "Embeds the Oratorio board inside LoopCode Desktop for a quick glance and common decisions.",
       "entry": "./desktop/oratorio-board.mjs",
       "styles": ["./desktop/oratorio-board.css"],
       "surfaces": [
@@ -19,7 +19,7 @@
         {
           "type": "pluginDetail",
           "title": "Oratorio Board",
-          "description": "Shows the Oratorio board in DotCraft Desktop with quick dispatch, review, and task actions."
+          "description": "Shows the Oratorio board in LoopCode Desktop with quick dispatch, review, and task actions."
         }
       ],
       "requiredAppIds": ["com.dotharness.oratorio"],

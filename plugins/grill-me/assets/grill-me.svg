@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 1024 1024" fill="none" role="img" aria-labelledby="title desc">
   <title id="title">Grill Me</title>
-  <desc id="desc">The DotCraft mascot in its approval pose, holding a question sign.</desc>
+  <desc id="desc">The LoopCode mascot in its approval pose, holding a question sign.</desc>
   <defs>
     <linearGradient id="blue" x1="279" y1="766" x2="736" y2="334" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#2458F7"/>

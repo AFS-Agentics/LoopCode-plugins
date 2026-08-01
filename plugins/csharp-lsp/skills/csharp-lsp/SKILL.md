@@ -1,6 +1,6 @@
 ---
 name: csharp-lsp
-description: Use when setting up, repairing, or explaining the DotCraft C# LSP plugin, including installing csharp-ls into the plugin-local server/csharp-ls directory and enabling C# language intelligence.
+description: Use when setting up, repairing, or explaining the LoopCode C# LSP plugin, including installing csharp-ls into the plugin-local server/csharp-ls directory and enabling C# language intelligence.
 ---
 
 # C# LSP
@@ -22,7 +22,7 @@ The script installs `csharp-ls` version `0.24.0` into `server/csharp-ls` by defa
 Requirements:
 
 - .NET 10 SDK or a compatible runtime capable of running the selected `csharp-ls` version.
-- DotCraft `Tools.Lsp.Enabled=true`.
-- Refresh or restart DotCraft after installation so the plugin-local command can be loaded.
+- LoopCode `Tools.Lsp.Enabled=true`.
+- Refresh or restart LoopCode after installation so the plugin-local command can be loaded.
 
 If the server fails to start, first verify `server/csharp-ls/csharp-ls` or `server/csharp-ls/csharp-ls.exe` exists, then run `dotnet --info` and check that the selected `csharp-ls` version is compatible with the installed .NET runtime.

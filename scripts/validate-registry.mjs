@@ -3,7 +3,7 @@ import { join, resolve, relative, dirname, isAbsolute } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..')
-const marketplacePath = join(repoRoot, '.craft', 'plugins', 'marketplace.json')
+const marketplacePath = join(repoRoot, '.loopcode', 'plugins', 'marketplace.json')
 const mcpServerFields = new Set([
   'name',
   'enabled',
@@ -351,9 +351,9 @@ if (!marketplace || !Array.isArray(marketplace.plugins)) {
       continue
     }
 
-    const manifestPath = join(resolved.full, '.craft-plugin', 'plugin.json')
+    const manifestPath = join(resolved.full, '.loopcode-plugin', 'plugin.json')
     if (!existsSync(manifestPath)) {
-      fail(`${name}: missing .craft-plugin/plugin.json`)
+      fail(`${name}: missing .loopcode-plugin/plugin.json`)
       continue
     }
     const manifest = readJson(manifestPath)

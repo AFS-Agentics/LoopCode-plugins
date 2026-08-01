@@ -1,9 +1,9 @@
 /*
- * Oratorio board desktop extension (DotCraft Desktop mainView).
+ * Oratorio board desktop extension (LoopCode Desktop mainView).
  *
- * Reads and writes the board through DotCraft's authenticated App Surface
+ * Reads and writes the board through LoopCode's authenticated App Surface
  * proxy. The renderer only supplies app/surface identifiers and relative paths;
- * DotCraft resolves the loopback endpoint and injects its bearer in main.
+ * LoopCode resolves the loopback endpoint and injects its bearer in main.
  * Heavier work — reject, draft publishing, comments, full review, settings —
  * stays in Oratorio via handoff.
  *
@@ -239,7 +239,7 @@ export default function OratorioBoardView({ host }) {
     if (drawerOpen && selectedId && !visible.some((it) => it.id === selectedId)) setDrawerOpen(false)
   }, [drawerOpen, selectedId, visible])
 
-  // ── Toasts (DotCraft's native toast stack; the board does not roll its own) ──
+  // ── Toasts (LoopCode's native toast stack; the board does not roll its own) ──
   const showInfo = useCallback((message, isError) => {
     host.ui.showToast({ message, type: isError ? 'error' : 'info' })
   }, [host])
@@ -440,7 +440,7 @@ export default function OratorioBoardView({ host }) {
     if (!connected) {
       return h('div', { className: 'oratorio-columns' }, surfaceState(h, ic, {
         glyph: 'plug', title: 'Connect Oratorio to show the board here',
-        body: 'DotCraft hosts the Oratorio board once the app connection is authorized. Consent still happens in Oratorio.',
+        body: 'LoopCode hosts the Oratorio board once the app connection is authorized. Consent still happens in Oratorio.',
         actions: [['Connect Oratorio', connectOrReconnect, true]],
         busy: actionBusy
       }))
@@ -448,7 +448,7 @@ export default function OratorioBoardView({ host }) {
     if (surfaceUnavailable) {
       return h('div', { className: 'oratorio-columns' }, surfaceState(h, ic, {
         glyph: 'sliders', title: 'Open Oratorio to load the board',
-        body: 'The app connection is ready. Open Oratorio so it can publish its local board surface to DotCraft.',
+        body: 'The app connection is ready. Open Oratorio so it can publish its local board surface to LoopCode.',
         actions: [['Open Oratorio', () => openOratorio('board'), true]],
         busy: actionBusy
       }))

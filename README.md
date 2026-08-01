@@ -1,9 +1,9 @@
-# DotCraft Official Plugins
+# LoopCode Official Plugins
 
-This repository is the official DotCraft plugins registry.
+This repository is the official LoopCode plugins registry.
 
-It contains curated DotCraft plugin source bundles and the marketplace index
-used by DotCraft clients to discover installable official plugins. Each plugin
-lives under `plugins/<pluginId>/` and must contain `.craft-plugin/plugin.json`.
+It contains curated LoopCode plugin source bundles and the marketplace index
+used by LoopCode clients to discover installable official plugins. Each plugin
+lives under `plugins/<pluginId>/` and must contain `.loopcode-plugin/plugin.json`.
 
-The marketplace index lives at `.craft/plugins/marketplace.json`.
+The marketplace index lives at `.loopcode/plugins/marketplace.json`.

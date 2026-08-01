@@ -7,13 +7,13 @@ description: Use when the current thread has an Oratorio App Binding, or when th
 
 ## Overview
 
-Oratorio is an operator-facing board for agent work. It tracks local tasks, GitHub issues, pull requests, review rounds, run history, decisions, comments, drafts, and source-write audit records. Its board tools are delivered through the Oratorio App Binding and MCP. Refer to the stable local tool names below; DotCraft assigns the canonical MCP namespace, so do not guess or hard-code it.
+Oratorio is an operator-facing board for agent work. It tracks local tasks, GitHub issues, pull requests, review rounds, run history, decisions, comments, drafts, and source-write audit records. Its board tools are delivered through the Oratorio App Binding and MCP. Refer to the stable local tool names below; LoopCode assigns the canonical MCP namespace, so do not guess or hard-code it.
 
 ## Core Concepts
 
 - Board items are the durable work records shown in Oratorio.
 - Local tasks are operator-created work items that may not come from GitHub.
-- Review rounds queue DotCraft-backed analysis for an existing board item.
+- Review rounds queue LoopCode-backed analysis for an existing board item.
 - Runs, decisions, comments, drafts, and timeline entries belong to Oratorio state.
 - Oratorio keeps source writes under operator control. Do not claim that a GitHub write, merge, approval, or publish happened unless Oratorio reports it.
 
@@ -33,7 +33,7 @@ When the user asks what is on the board, summarize items by status and highlight
 
 When the user asks to create tasks from a discussion, extract concrete tasks, avoid duplicates when visible board context is available, and create only tasks that are specific enough to act on.
 
-Use `CreateBoardTask` or `QueueReviewRound` only when the user explicitly asks to change Oratorio state. Do not rely on a possible approval prompt as authorization. Execute clear, low-risk requests directly; ask a short clarification only when the target, scope, or risk is ambiguous. If DotCraft presents an approval prompt, treat it as an additional gate.
+Use `CreateBoardTask` or `QueueReviewRound` only when the user explicitly asks to change Oratorio state. Do not rely on a possible approval prompt as authorization. Execute clear, low-risk requests directly; ask a short clarification only when the target, scope, or risk is ambiguous. If LoopCode presents an approval prompt, treat it as an additional gate.
 
 ## Output
 

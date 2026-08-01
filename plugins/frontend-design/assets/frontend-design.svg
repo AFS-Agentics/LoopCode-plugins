@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 1024 1024" fill="none" role="img" aria-labelledby="title desc">
   <title id="title">Frontend Design</title>
-  <desc id="desc">The DotCraft robot with a small interface canvas in front.</desc>
+  <desc id="desc">The LoopCode robot with a small interface canvas in front.</desc>
   <defs>
     <linearGradient id="blue" x1="279" y1="766" x2="736" y2="334" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#2458F7"/>

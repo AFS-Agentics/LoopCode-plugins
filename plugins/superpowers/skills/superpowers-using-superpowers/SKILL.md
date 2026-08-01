@@ -1,6 +1,6 @@
 ---
 name: superpowers-using-superpowers
-description: Use when starting work with Superpowers, choosing which Superpowers skill applies, or explaining how the Superpowers workflow fits DotCraft.
+description: Use when starting work with Superpowers, choosing which Superpowers skill applies, or explaining how the Superpowers workflow fits LoopCode.
 ---
 
 # Using Superpowers
@@ -37,7 +37,7 @@ Check the relevant `superpowers-*` skills before doing substantial work:
 
 ## Practical Use
 
-When a Superpowers skill fits, load it through DotCraft's skill mechanism and follow the parts that apply. If several skills fit, start with the process skill that decides the approach, then use implementation skills as needed.
+When a Superpowers skill fits, load it through LoopCode's skill mechanism and follow the parts that apply. If several skills fit, start with the process skill that decides the approach, then use implementation skills as needed.
 
 Use task tracking when a selected skill has a checklist or multi-step workflow. Keep the checklist scoped to the current task, and update it as work completes.
 

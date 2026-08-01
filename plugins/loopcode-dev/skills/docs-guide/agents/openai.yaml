@@ -1,0 +1,4 @@
+interface:
+  display_name: "LoopCode Docs Guide"
+  short_description: "Write and edit LoopCode documentation"
+  default_prompt: "Use $loopcode-docs-guide to write or revise LoopCode documentation with the right tone and structure for end users vs developers."

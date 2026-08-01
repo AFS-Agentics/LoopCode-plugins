@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 1024 1024" fill="none" role="img" aria-labelledby="title desc">
   <title id="title">Security Guidance</title>
-  <desc id="desc">A DotCraft robot with a security shield for lifecycle hook code review guidance.</desc>
+  <desc id="desc">A LoopCode robot with a security shield for lifecycle hook code review guidance.</desc>
   <defs>
     <linearGradient id="body" x1="279" y1="766" x2="736" y2="334" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#0284C7"/>

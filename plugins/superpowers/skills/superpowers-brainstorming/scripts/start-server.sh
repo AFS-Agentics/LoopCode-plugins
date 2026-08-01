@@ -12,7 +12,7 @@
 #                         Use 0.0.0.0 in remote/containerized environments.
 #   --url-host <host>     Hostname shown in returned URL JSON.
 #   --foreground          Run server in the current terminal (no backgrounding).
-#   --background          Force background mode (overrides DotCraft auto-foreground).
+#   --background          Force background mode (overrides LoopCode auto-foreground).
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
