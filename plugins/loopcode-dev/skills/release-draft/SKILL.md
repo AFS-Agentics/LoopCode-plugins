@@ -55,7 +55,7 @@ LoopCode vX.Y.Z is a major release focused on ...
 1. **Feature Name**
    Short user-facing paragraph.
 
-![](https://github.com/AFS-Agentics/resources/raw/master/dotcraft/whats-new/feature.gif)
+![](https://github.com/AFS-Agentics/resources/raw/master/loopcode/whats-new/feature.gif)
 
 ## Infrastructure and Experience Improvements
 
@@ -89,7 +89,7 @@ LoopCode vX.Y.Z is a major release focused on ...
 Before returning the draft:
 
 - Confirm every highlighted feature has an evidence source.
-- Confirm each media link renders from `https://github.com/AFS-Agentics/resources/raw/master/dotcraft/whats-new/`.
+- Confirm each media link renders from `https://github.com/AFS-Agentics/resources/raw/master/loopcode/whats-new/`.
 - Confirm the compare range uses the previous release tag and target version.
 - Confirm the release body is English except for canonical identifiers, product names, code, and URLs.
 - Keep the answer copy-paste ready. Add a short note after the draft only for sources, caveats, or missing data.

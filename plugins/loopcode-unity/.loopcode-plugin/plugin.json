@@ -11,7 +11,7 @@
     "displayName": "loopcode-unity",
     "shortDescription": "Connect Unity Editor for game projects",
     "longDescription": "loopcode-unity connects running Unity Editor projects to LoopCode threads so agents can invoke Unity tools.",
-    "developerName": "DotHarness",
+    "developerName": "AFS Agentics",
     "category": "Engineering",
     "capabilities": ["App", "Skill", "Unity", "Read", "Write"],
     "defaultPrompt": "Fix the error in the Unity Editor console.",

@@ -12,7 +12,7 @@
     "displayName": "Oratorio",
     "shortDescription": "Manage and inspect agent board",
     "longDescription": "Oratorio connects LoopCode threads to Oratorio Desktop so agents can read board items, create local tasks, and queue review rounds while keeping board state and write operations visible to the operator.",
-    "developerName": "DotHarness",
+    "developerName": "AFS Agentics",
     "category": "Productivity",
     "capabilities": ["App", "Skill", "Read", "Write"],
     "defaultPrompt": "Manage and inspect Oratorio board tasks.",

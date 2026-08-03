@@ -22,10 +22,10 @@
           "description": "Shows the Oratorio board in LoopCode Desktop with quick dispatch, review, and task actions."
         }
       ],
-      "requiredAppIds": ["com.dotharness.oratorio"],
+      "requiredAppIds": ["com.afsagentics.oratorio"],
       "requiredAppSurfaces": [
         {
-          "appId": "com.dotharness.oratorio",
+          "appId": "com.afsagentics.oratorio",
           "surfaceId": "board",
           "access": ["read", "write"]
         }

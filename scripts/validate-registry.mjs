@@ -1,4 +1,4 @@
-import { existsSync, readFileSync } from 'node:fs'
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs'
 import { join, resolve, relative, dirname, isAbsolute } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -69,12 +69,71 @@ function validateManifestReferences(pluginId, pluginRoot, manifest) {
     validateManifestPathReference(pluginId, pluginRoot, `manifest ${key}`, manifest[key])
   }
   validateManifestHooksReferences(pluginId, pluginRoot, manifest.hooks)
+  validateManifestPathsEntries(pluginId, pluginRoot, manifest.paths)
   validateServerContributions(pluginId, pluginRoot, manifest)
+  validateSkillDefinitions(pluginId, pluginRoot, manifest)
 
   const iface = manifest.interface ?? {}
   for (const key of ['composerIcon', 'logo']) {
     validateManifestPathReference(pluginId, pluginRoot, `interface.${key}`, iface[key])
   }
+}
+
+function validateManifestPathsEntries(pluginId, pluginRoot, paths) {
+  if (paths == null) return
+  if (!isObject(paths)) {
+    fail(`${pluginId}: manifest paths must be an object keyed by alias`)
+    return
+  }
+  for (const [alias, value] of Object.entries(paths)) {
+    validateManifestPathReference(pluginId, pluginRoot, `paths.${alias}`, value)
+  }
+}
+
+function validateSkillDefinitions(pluginId, pluginRoot, manifest) {
+  // A skills directory whose skill folders lack SKILL.md makes the plugin
+  // install but leaves its skills invisible at runtime — catch it here.
+  if (typeof manifest.skills !== 'string') return
+  const resolved = resolvePluginRelativePath(pluginRoot, manifest.skills)
+  if (resolved.error || !existsSync(resolved.full)) return
+  if (!statSync(resolved.full).isDirectory()) {
+    fail(`${pluginId}: manifest skills must point to a directory`)
+    return
+  }
+
+  const entries = readdirSync(resolved.full, { withFileTypes: true })
+    .filter(entry => entry.isDirectory())
+  for (const entry of entries) {
+    const skillMd = join(resolved.full, entry.name, 'SKILL.md')
+    if (!existsSync(skillMd)) {
+      fail(`${pluginId}: skill '${entry.name}' is missing SKILL.md`)
+      continue
+    }
+    const frontmatter = parseFrontmatter(readFileSync(skillMd, 'utf8'))
+    if (!frontmatter) {
+      fail(`${pluginId}: skill '${entry.name}' SKILL.md has no YAML frontmatter`)
+      continue
+    }
+    if (!isNonEmptyString(frontmatter.name)) {
+      fail(`${pluginId}: skill '${entry.name}' SKILL.md frontmatter is missing 'name'`)
+    }
+    if (!isNonEmptyString(frontmatter.description)) {
+      fail(`${pluginId}: skill '${entry.name}' SKILL.md frontmatter is missing 'description'`)
+    }
+  }
+}
+
+function parseFrontmatter(content) {
+  const match = /^---\r?\n([\s\S]*?)\r?\n---(\r?\n|$)/.exec(content)
+  if (!match) return null
+  const fields = {}
+  for (const line of match[1].split(/\r?\n/)) {
+    const colon = line.indexOf(':')
+    if (colon <= 0) continue
+    const key = line.slice(0, colon).trim()
+    fields[key] = line.slice(colon + 1).trim()
+  }
+  return fields
 }
 
 function validateManifestPathReference(pluginId, pluginRoot, label, value) {
@@ -318,6 +377,7 @@ if (!marketplace || !Array.isArray(marketplace.plugins)) {
   fail('marketplace.plugins must be an array')
 } else {
   const seen = new Set()
+  const referencedPluginDirs = new Set()
   for (const entry of marketplace.plugins) {
     const name = typeof entry.name === 'string' ? entry.name.trim() : ''
     if (!/^[A-Za-z0-9][A-Za-z0-9._:-]*$/.test(name)) {
@@ -350,6 +410,7 @@ if (!marketplace || !Array.isArray(marketplace.plugins)) {
       fail(`${name}: source.path does not exist`)
       continue
     }
+    referencedPluginDirs.add(resolve(resolved.full))
 
     const manifestPath = join(resolved.full, '.loopcode-plugin', 'plugin.json')
     if (!existsSync(manifestPath)) {
@@ -362,6 +423,19 @@ if (!marketplace || !Array.isArray(marketplace.plugins)) {
       fail(`${name}: manifest id '${manifest.id}' does not match marketplace name`)
     }
     validateManifestReferences(name, resolved.full, manifest)
+  }
+
+  // Reverse check: every plugin directory on disk must be listed in the
+  // marketplace, otherwise it silently never reaches the sync/catalog.
+  const pluginsRoot = join(repoRoot, 'plugins')
+  if (existsSync(pluginsRoot)) {
+    for (const entry of readdirSync(pluginsRoot, { withFileTypes: true })) {
+      if (!entry.isDirectory()) continue
+      const dir = resolve(pluginsRoot, entry.name)
+      if (!referencedPluginDirs.has(dir)) {
+        fail(`plugins/${entry.name} has no marketplace entry in marketplace.json`)
+      }
+    }
   }
 }
 

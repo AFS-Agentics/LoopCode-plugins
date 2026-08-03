@@ -11,7 +11,7 @@
     "displayName": "C# LSP",
     "shortDescription": "Enable csharp-ls for C# projects",
     "longDescription": "C# LSP connects LoopCode's LSP tools to csharp-ls so agents can inspect definitions, references, symbols, and call relationships in C# workspaces.",
-    "developerName": "DotHarness",
+    "developerName": "AFS Agentics",
     "category": "Coding",
     "capabilities": ["Skill", "LSP", "C#"],
     "defaultPrompt": "Set up C# language intelligence for this workspace.",

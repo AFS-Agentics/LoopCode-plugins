@@ -1,7 +1,7 @@
 {
   "apps": [
     {
-      "appId": "com.dotharness.oratorio",
+      "appId": "com.afsagentics.oratorio",
       "displayName": "Oratorio",
       "developerName": "AFS Agentics",
       "description": "Manage Oratorio board items and review rounds from selected LoopCode threads.",

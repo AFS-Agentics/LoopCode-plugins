@@ -10,7 +10,7 @@
     "displayName": "LoopCode Dev",
     "shortDescription": "LoopCode development guidance, documentation standards, and release drafting.",
     "longDescription": "Product-specific guidance for contributors working on LoopCode itself, including repository development norms, localized documentation standards, and evidence-based GitHub release drafting.",
-    "developerName": "DotHarness",
+    "developerName": "AFS Agentics",
     "category": "Engineering",
     "capabilities": ["Skill"],
     "defaultPrompt": "Help me make this change to LoopCode while following the project's development, documentation, and release conventions.",

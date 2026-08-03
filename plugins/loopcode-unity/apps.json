@@ -1,7 +1,7 @@
 {
   "apps": [
     {
-      "appId": "com.dotharness.loopcode-unity",
+      "appId": "com.afsagentics.loopcode-unity",
       "toolNamespace": "unity",
       "displayName": "Unity Editor",
       "developerName": "AFS Agentics",

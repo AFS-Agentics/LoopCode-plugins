@@ -11,7 +11,7 @@
     "displayName": "C/C++ LSP",
     "shortDescription": "Enable clangd for C and C++ projects",
     "longDescription": "C/C++ LSP connects LoopCode's LSP tools to clangd so agents can inspect definitions, references, symbols, and call relationships in C and C++ workspaces.",
-    "developerName": "DotHarness",
+    "developerName": "AFS Agentics",
     "category": "Coding",
     "capabilities": ["Skill", "LSP", "C", "C++"],
     "defaultPrompt": "Set up C/C++ language intelligence for this workspace.",

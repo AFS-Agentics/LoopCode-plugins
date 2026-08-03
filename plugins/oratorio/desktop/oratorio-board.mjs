@@ -18,7 +18,7 @@
  *   POST /items/id/{itemId}/reorder {beforeItemId}  -> same-column reorder
  */
 
-const APP_ID = 'com.dotharness.oratorio'
+const APP_ID = 'com.afsagentics.oratorio'
 const BOARD_SURFACE_ID = 'board'
 
 const COLUMNS = [
